@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const AsistenciaController_1 = require("../controllers/AsistenciaController");
+const router = (0, express_1.Router)();
+const controller = new AsistenciaController_1.AsistenciaController();
+router.get('/asistencias', controller.getAll.bind(controller));
+router.get('/asistencias/:id', controller.getById.bind(controller));
+router.post('/asistencias', controller.create.bind(controller));
+router.put('/asistencias/:id', controller.update.bind(controller));
+router.delete('/asistencias/:id', controller.delete.bind(controller));
+exports.default = router;
