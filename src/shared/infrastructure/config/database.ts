@@ -2,6 +2,7 @@ import { DataSource } from 'typeorm';
 import * as dotenv from 'dotenv';
 import { AsistenciaEntity } from '../../../asistencia/infrastructure/persistence/entities/AsistenciaEntity';
 import { CalificacionEntity } from '../../../calificacion/infrastructure/persistence/entities/CalificacionEntity';
+import { AsistenciaTutoradoEntity } from '../../../asistencia-tutorado/infrastructure/persistence/entities/AsistenciaTutoradoEntity';
 
 dotenv.config();
 
@@ -14,6 +15,6 @@ export const AppDataSource = new DataSource({
   database: process.env.DB_DATABASE,
   synchronize: true,
   logging: process.env.NODE_ENV === 'development',
-  entities: [AsistenciaEntity, CalificacionEntity],
+  entities: [AsistenciaEntity, CalificacionEntity, AsistenciaTutoradoEntity],
   migrations: [],
 });
