@@ -6,18 +6,22 @@ import { AlumnosDataSource } from './shared/infrastructure/config/alumnosDatabas
 import asistenciaRoutes from './asistencia/infrastructure/http/routes/asistencia.routes';
 import calificacionRoutes from './calificacion/infrastructure/http/routes/calificacion.routes';
 import asistenciaTutoradoRoutes from './asistencia-tutorado/infrastructure/http/routes/asistencia-tutorado.routes';
+import { informesTestRoutes } from './informes/infrastructure/http/routes/informes-test.routes';
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-// Rutas
+// Rutas principales
 app.use('/api', asistenciaRoutes);
 app.use('/api', calificacionRoutes);
 
-// Agregar las rutas de asistencia tutorado
+// Rutas de asistencia tutorado
 app.use('/api/asistencia-tutorado', asistenciaTutoradoRoutes);
+
+// Rutas de test para informes (sin dependencias complejas)
+app.use('/api/informes', informesTestRoutes);
 
 // Inicializar conexión a la base de datos principal
 AppDataSource.initialize()

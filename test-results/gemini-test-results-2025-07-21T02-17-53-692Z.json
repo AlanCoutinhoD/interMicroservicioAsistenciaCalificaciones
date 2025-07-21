@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-07-21T02:17:53.293Z",
+  "test_summary": {
+    "environment_variables": "PASS",
+    "google_ai_connectivity": "PASS",
+    "local_endpoint_status": "PASS",
+    "gemini_integration_test": "FAIL"
+  },
+  "detailed_results": [
+    {
+      "test_name": "environment_variables",
+      "status": "PASS",
+      "details": {
+        "api_key_present": true,
+        "api_key_length": 39,
+        "api_key_preview": "AIzaSyDJ0j..."
+      },
+      "timestamp": "2025-07-21T02:17:53.293Z"
+    },
+    {
+      "test_name": "google_ai_connectivity",
+      "status": "PASS",
+      "details": {
+        "status_code": 403,
+        "response_preview": "{\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Method doesn't allow unregistered callers (callers without established identity). Please use API Key or other form of API consumer identity to call this",
+        "connection_successful": true
+      },
+      "timestamp": "2025-07-21T02:17:53.688Z"
+    },
+    {
+      "test_name": "local_endpoint_status",
+      "status": "PASS",
+      "details": {
+        "endpoint_available": true,
+        "service_instantiation": true,
+        "integration_configured": true
+      },
+      "timestamp": "2025-07-21T02:17:53.688Z"
+    },
+    {
+      "test_name": "gemini_integration_test",
+      "status": "FAIL",
+      "details": {
+        "error_message": "write EPROTO 4C450000:error:0A00010B:SSL routines:ssl3_get_record:wrong version number:c:\\ws\\deps\\openssl\\openssl\\ssl\\record\\ssl3_record.c:355:\n"
+      },
+      "timestamp": "2025-07-21T02:17:53.692Z"
+    }
+  ]
+}
