@@ -1,5 +1,6 @@
 export enum EstadoAsistenciaTutorado {
     PRESENTE = 'Presente',
     RETARDO = 'Retardo',
-    AUSENTE = 'Ausente'
+    AUSENTE = 'Ausente',
+    JUSTIFICADO = 'Justificado'
 }
