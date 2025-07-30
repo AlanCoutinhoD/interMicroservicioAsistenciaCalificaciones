@@ -1,5 +1,5 @@
 import { Repository } from 'typeorm';
-import { AppDataSource } from '../../../../shared/infrastructure/config/database';
+import { AppDataSource } from '../../../../shared/infrastructure/config/databases';
 import { ICalificacionRepository } from '../../../domain/repositories/ICalificacionRepository';
 import { Calificacion } from '../../../domain/entities/Calificacion';
 import { CalificacionEntity } from '../entities/CalificacionEntity';

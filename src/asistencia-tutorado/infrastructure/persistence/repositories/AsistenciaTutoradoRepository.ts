@@ -1,5 +1,5 @@
 import { Repository } from 'typeorm';
-import { AppDataSource } from '../../../../shared/infrastructure/config/database';
+import { AppDataSource } from '../../../../shared/infrastructure/config/databases';
 import { AsistenciaTutorado } from '../../../domain/entities/AsistenciaTutorado';
 import { IAsistenciaTutoradoRepository } from '../../../application/ports/output/IAsistenciaTutoradoRepository';
 import { AsistenciaTutoradoEntity } from '../entities/AsistenciaTutoradoEntity';
