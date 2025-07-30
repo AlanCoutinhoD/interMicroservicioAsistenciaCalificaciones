@@ -1,5 +1,5 @@
 import { Repository } from 'typeorm';
-import { AlumnosDataSource } from '../../config/alumnosDatabase';
+import { AlumnosDataSource } from '../../config/databases';
 import { AlumnoEntity } from '../entities/AlumnoEntity';
 import { Alumno } from '../../../domain/entities/Alumno';
 

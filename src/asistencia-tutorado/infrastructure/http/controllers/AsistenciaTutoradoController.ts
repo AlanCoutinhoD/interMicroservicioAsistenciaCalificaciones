@@ -6,7 +6,7 @@ import { AsistenciaTutoradoRepository } from '../../persistence/repositories/Asi
 import { AsistenciaTutorado } from '../../../domain/entities/AsistenciaTutorado';
 import { AlumnoRepository } from '../../../../shared/infrastructure/persistence/repositories/AlumnoRepository';
 import { EstadoAsistenciaTutorado } from '../../../domain/enums/EstadoAsistenciaTutorado';
-import { AlumnosDataSource } from '../../../../shared/infrastructure/config/alumnosDatabase';
+import { AlumnosDataSource } from '../../../../shared/infrastructure/config/databases';
 
 export class AsistenciaTutoradoController {
     private createUseCase: CreateAsistenciaTutoradoUseCase;
