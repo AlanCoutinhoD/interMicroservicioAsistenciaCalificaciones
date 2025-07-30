@@ -1,0 +1,32 @@
+[2025-07-21T02:17:53.293Z] [INFO] 🔧 Test de conectividad y configuración
+
+[2025-07-21T02:17:53.293Z] [INFO] 1. Variables de entorno:
+[2025-07-21T02:17:53.293Z] [INFO]    - GEMINI_API_KEY presente: true
+[2025-07-21T02:17:53.293Z] [INFO]    - Longitud de API Key: 39
+[2025-07-21T02:17:53.293Z] [INFO]    - Primeros caracteres: AIzaSyDJ0j...
+[2025-07-21T02:17:53.293Z] [INFO] 
+2. Conectividad a Google AI:
+[2025-07-21T02:17:53.294Z] [INFO] 🌐 Probando conectividad a Google AI API...
+[2025-07-21T02:17:53.687Z] [INFO]    ✅ Conectividad exitosa
+[2025-07-21T02:17:53.688Z] [INFO]    - Status: 403
+[2025-07-21T02:17:53.688Z] [INFO]    - Response preview: {
+  "error": {
+    "code": 403,
+    "message": "Method doesn't allow unregistered callers (callers without established identity). Please use API Key or other form of API consumer identity to call this
+[2025-07-21T02:17:53.688Z] [INFO] 
+3. Test del endpoint local:
+[2025-07-21T02:17:53.688Z] [INFO]    ✅ El endpoint /api/informes/test-gemini está respondiendo
+[2025-07-21T02:17:53.688Z] [INFO]    ✅ El servicio GeminiAIService se está instanciando
+[2025-07-21T02:17:53.688Z] [INFO]    ✅ La integración está configurada correctamente
+[2025-07-21T02:17:53.688Z] [INFO] 
+4. Probando endpoint completo de Gemini:
+[2025-07-21T02:17:53.692Z] [INFO]    ❌ Error probando endpoint: write EPROTO 4C450000:error:0A00010B:SSL routines:ssl3_get_record:wrong version number:c:\ws\deps\openssl\openssl\ssl\record\ssl3_record.c:355:
+
+[2025-07-21T02:17:53.692Z] [INFO] 
+📋 Resumen:
+[2025-07-21T02:17:53.692Z] [INFO] - Total de pruebas: 4
+[2025-07-21T02:17:53.692Z] [INFO] - Pruebas exitosas: 3
+[2025-07-21T02:17:53.692Z] [INFO] - Pruebas fallidas: 1
+[2025-07-21T02:17:53.692Z] [INFO] - La integración de Gemini AI está técnicamente funcional
+[2025-07-21T02:17:53.692Z] [INFO] 
+📤 Exportando resultados...

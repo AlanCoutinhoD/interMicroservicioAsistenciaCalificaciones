@@ -1,0 +1,53 @@
+{
+  "timestamp": "2025-07-21T02:18:07.673Z",
+  "test_session_id": "session-1753064287674",
+  "tests_performed": [
+    {
+      "test_name": "Test de Informe de Asistencia Básico",
+      "endpoint": "/api/informes/test-gemini",
+      "method": "POST",
+      "status_code": 200,
+      "duration_ms": 7162,
+      "timestamp": "2025-07-21T02:18:14.837Z",
+      "success": true,
+      "response_summary": {
+        "success": true,
+        "report_type": "asistencia",
+        "report_text_length": 4108,
+        "ai_model": "gemini-1.5-flash"
+      },
+      "full_response": {
+        "success": true,
+        "tipo_informe": "asistencia",
+        "informe_texto": "```json\n{\n  \"titulo\": \"Análisis de Asistencia - Tutor Ejemplo - Periodo 2025-1\",\n  \"fecha_generacion\": \"2023-10-27 17:30:00\",\n  \"resumen_ejecutivo\": \"Este informe analiza la asistencia de los tutorados del TutorEjemplo durante el periodo 2025-1, basado en 3 registros.  Se observa una tasa de asistencia efectiva del 66.67%, con un tercio de los estudiantes presentes, un tercio con retardos y un tercio ausentes.  Esto indica una necesidad de intervención para mejorar la asistencia y se recomiendan acciones para abordar las causas subyacentes de las ausencias y los retardos.\",\n  \"metricas_clave\": {\n    \"total_registros\": 3,\n    \"porcentaje_asistencia\": \"66.67%\",\n    \"porcentaje_retardos\": \"33.33%\",\n    \"porcentaje_ausencias\": \"33.33%\"\n  },\n  \"analisis_detallado\": [\n    {\n      \"seccion\": \"Análisis de Asistencia por Estudiante\",\n      \"contenido\": \"El análisis muestra una variabilidad significativa en la asistencia de los estudiantes. Juan Pérez García asistió puntualmente, mientras que María García López llegó tarde y Pedro López Silva estuvo ausente.  Con una muestra tan pequeña, es difícil identificar patrones claros, pero se requiere un seguimiento más exhaustivo para determinar las causas de la falta de asistencia de Pedro López Silva y el retraso de María García López.\",\n      \"hallazgos\": [\"Variabilidad en la asistencia entre estudiantes\", \"Ausencia total de un estudiante\", \"Retardo de un estudiante\"]\n    },\n    {\n      \"seccion\": \"Análisis de Tendencias Temporales\",\n      \"contenido\": \"Debido a que solo se dispone de datos de una única fecha, no es posible analizar tendencias temporales. Se requiere un seguimiento continuo de la asistencia para poder identificar patrones a lo largo del tiempo.\",\n      \"hallazgos\": [\"Insuficiencia de datos para el análisis de tendencias temporales\"]\n    },\n    {\n      \"seccion\": \"Identificación de Estudiantes en Riesgo\",\n      \"contenido\": \"Pedro López Silva, debido a su ausencia, se identifica como estudiante en riesgo.  Se requiere una investigación para determinar la causa de su ausencia y proporcionar apoyo.\",\n      \"hallazgos\": [\"Identificado un estudiante en riesgo: Pedro López Silva\"]\n    }\n  ],\n  \"recomendaciones\": [\n    {\n      \"prioridad\": \"Alta\",\n      \"titulo\": \"Investigar la ausencia de Pedro López Silva\",\n      \"descripcion\": \"Se debe contactar a Pedro López Silva para determinar las razones de su ausencia y ofrecer apoyo.  Se pueden explorar posibles barreras académicas o personales que impiden su asistencia.\",\n      \"acciones_sugeridas\": [\"Contactar al estudiante\", \"Realizar entrevista individual\", \"Ofrecer apoyo académico o personal\"]\n    },\n    {\n      \"prioridad\": \"Media\",\n      \"titulo\": \"Seguimiento de la asistencia de María García López\",\n      \"descripcion\": \"Se debe monitorizar la asistencia de María García López para determinar si el retraso fue un incidente aislado o una tendencia.  En caso de repetirse, se debe investigar las causas y ofrecer apoyo.\",\n      \"acciones_sugeridas\": [\"Monitorear la asistencia futura\", \"Investigar las causas del retraso (si se repite)\"]\n    },\n    {\n      \"prioridad\": \"Baja\",\n      \"titulo\": \"Ampliar la frecuencia de registro de asistencia\",\n      \"descripcion\": \"Para un análisis más completo y la detección temprana de patrones, se recomienda aumentar la frecuencia de los registros de asistencia.  Esto permitirá la identificación de tendencias y la toma de acciones más efectivas.\",\n      \"acciones_sugeridas\": [\"Aumentar la frecuencia de registro\", \"Implementar sistema de seguimiento online\"]\n    }\n  ],\n  \"conclusiones\": \"La asistencia en el periodo 2025-1 muestra una necesidad de intervención para mejorar la asistencia de los estudiantes.  La investigación de las causas de las ausencias y los retardos, junto con un seguimiento más exhaustivo, son cruciales para asegurar el éxito académico de los estudiantes.\",\n  \"proximos_pasos\": [\"Implementar las recomendaciones propuestas\", \"Realizar un seguimiento continuo de la asistencia\", \"Generar un nuevo informe al finalizar el periodo 2025-1 para evaluar la efectividad de las intervenciones\"]\n}\n```\n",
+        "metadata": {
+          "prompt": "\nEres un asistente especializado en análisis educativo para instituciones universitarias.\nTu tarea es generar informes profesionales y detallados sobre el rendimiento académico de estudiantes.\n\nFORMAT...",
+          "model": "gemini-1.5-flash",
+          "timestamp": "2025-07-21T02:18:14.834Z"
+        }
+      }
+    },
+    {
+      "test_name": "Health Check de Informes",
+      "endpoint": "/api/informes/health",
+      "method": "GET",
+      "success": false,
+      "error": "Timeout - El informe tomó más de 60 segundos en generarse",
+      "timestamp": "2025-07-21T02:19:14.845Z"
+    },
+    {
+      "test_name": "Información del Servicio AI",
+      "endpoint": "/api/informes/service-info",
+      "method": "GET",
+      "success": false,
+      "error": "Timeout - El informe tomó más de 60 segundos en generarse",
+      "timestamp": "2025-07-21T02:20:14.860Z"
+    }
+  ],
+  "summary": {
+    "total_tests": 3,
+    "successful_tests": 1,
+    "failed_tests": 2,
+    "reports_generated": 1
+  }
+}
